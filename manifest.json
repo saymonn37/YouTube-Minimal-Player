@@ -1,0 +1,30 @@
+{
+	"manifest_version": 3,
+	"name": "YT Minimal Video&Live Player",
+	"version": "2.0",
+	"description": "Show only the video or live player on YouTube pages.",
+	"permissions": ["activeTab", "scripting", "storage"],
+	"action": {
+		"default_popup": "popup.html",
+		"default_icon": {
+			"16": "icons/icon16.png",
+			"48": "icons/icon48.png",
+			"128": "icons/icon128.png"
+		}
+	},
+	"background": {
+		"service_worker": "background.js"
+	},
+	"content_scripts": [
+		{
+			"matches": ["https://www.youtube.com/*"],
+			"js": ["contentScript.js"],
+			"run_at": "document_start"
+		},
+		{
+			"matches": ["https://www.youtube.com/*"],
+			"js": ["contentScriptLive.js"],
+			"run_at": "document_start"
+		}
+	]
+}
