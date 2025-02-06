@@ -25,7 +25,7 @@ This extension is not available on the Chrome Web Store. To install it manually,
    ```
 
 2. **Enable Developer Mode** in Chrome:
-   - Open Chrome and navigate to `chrome://extensions/`.
+   - Open Chrome and navigate to `chrome://extensions/`
    - Toggle **Developer Mode** (top right corner).
 
 3. **Load Unpacked Extension**:
