@@ -1,103 +1,90 @@
-# 📌 YT Minimal Video & Live Player
+# 🎬 YouTube Minimal Player
 
-🚀 **YT Minimal Video & Live Player** is a Chrome extension that allows users to switch YouTube's display mode to a minimal video player or a live mode with an embedded chat. It enables distraction-free viewing by removing unnecessary elements and focusing only on the video content.
+## 📌 Overview
 
----
+**YouTube Minimal Player** is a browser extension that provides a clutter-free YouTube viewing experience. It transforms standard YouTube pages into clean, minimalist video or live stream players by removing distracting elements like comments, recommendations, and other interface components.
 
 ## 🎯 Features
 
-✅ **Minimal Video Mode** – Displays only the video player, removing all other YouTube elements.  
-✅ **Minimal Live Mode** – Shows the video player with an optional embedded live chat.  
-✅ **Easy Toggle Switch** – Quickly switch between modes using the extension's popup.  
-✅ **Lightweight & Fast** – Works seamlessly without affecting video playback performance.  
-✅ **No Extra Permissions** – Requires only basic permissions for execution.  
+- ✅ **Minimal Video Mode** - Strip away everything but the video player for distraction-free viewing
+- ✅ **Minimal Live Mode** - Optimize the interface for live streams with a clean video player and chat panel
+- ✅ **Easy Toggle** - Switch between modes with a simple click in the extension popup
+- ✅ **Instant Application** - Changes take effect immediately without manual page refreshes
+- ✅ **Non-Intrusive** - Only activates when you choose to use it, keeping your normal YouTube experience intact
+- ✅ **Lightweight** - Minimal performance impact on your browser
 
----
+## 🖥️ Screenshot
 
-## 🛠️ Installation
+![13-03-2025T18-05-13](https://github.com/user-attachments/assets/ebd87a28-2061-4b8f-a276-4cf431b48239)
+![13-03-2025T18-04-53](https://github.com/user-attachments/assets/a87f63a3-a7d8-4257-bf51-f9667353fbae)
+![13-03-2025T18-05-00](https://github.com/user-attachments/assets/c08108a9-1dab-4ecb-8d11-777139615abc)
+![13-03-2025T18-05-09](https://github.com/user-attachments/assets/5aa1795f-381e-4dc5-8684-b377902960c5)
+![13-03-2025T18-05-06](https://github.com/user-attachments/assets/e6f34a9c-9cea-414c-a732-411ad307a0f1)
 
-This extension is not available on the Chrome Web Store. To install it manually, follow these steps:
+## 🔧 Installation
 
-1. **Download the repository**:
-   ```bash
-   git clone https://github.com/saymonn37/YouTube-Minimal-Player.git
-   cd YouTube-Minimal-Player
-   ```
+### Manual Installation
+1. Download this repository by clicking Code > Download ZIP
+2. Extract the ZIP file to a location on your computer
+3. Open Chrome and go to `chrome://extensions/`
+4. Enable "Developer mode" in the top-right corner
+5. Click "Load unpacked" and select the extracted folder
 
-2. **Enable Developer Mode** in Chrome:
-   - Open Chrome and navigate to `chrome://extensions/`
-   - Toggle **Developer Mode** (top right corner).
+## 🚀 Usage
 
-3. **Load Unpacked Extension**:
-   - Click **"Load unpacked"**.
-   - Select the downloaded folder containing the extension files.
+1. Navigate to any YouTube video or live stream page
+2. Click the extension icon in your browser toolbar to open the popup
+3. Select your preferred mode:
+   - **Minimal Video Player** - Shows only the video player
+   - **Minimal Live Player** - Shows the video player with a chat panel
+4. The page will instantly transform to your selected view
+5. To return to normal YouTube, toggle off both switches in the popup
 
-4. **Use the Extension**:
-   - Click the extension icon in the Chrome toolbar.
-   - Toggle between **Minimal Video Mode** and **Minimal Live Mode**.
+## ⚙️ Modes Explained
 
----
+### Minimal Video Player
+- Removes all page elements except the video player
+- Creates a full-screen, distraction-free viewing experience
+- Perfect for focusing on video content without distractions
 
-## 🚀 How It Works
+### Minimal Live Player
+- Creates a dual-panel view with the video player (70%) and live chat (30%)
+- Removes annoying banner messages and engagement prompts
+- Ideal for watching live streams while still interacting with chat
 
-1. Open a **YouTube** video or live stream.
-2. Click on the **extension icon**.
-3. Select one of the following modes:
-   - **Minimal Video Mode** → Shows only the video.
-   - **Minimal Live Mode** → Shows the video + live chat.
-4. The page will reload, applying the selected mode.
+## 🛠️ Technical Details
 
----
+This extension works by:
 
-## 🖥️ UI Overview
+1. Detecting when you're on a YouTube video page
+2. Storing your preferred mode selection in local browser storage
+3. Executing content scripts that modify the page DOM to remove unwanted elements
+4. Preserving the video player and/or chat functionality
+5. Applying custom CSS to optimize the viewing experience
 
-The extension popup includes two toggle switches:
+## 🔒 Privacy
 
-- **Minimal Video Player**: Enables the simplified video-only mode.
-- **Minimal Live Player**: Enables the video with embedded live chat.
+- **No Data Collection** - This extension does not collect or transmit any user data
+- **Minimal Permissions** - Only requests access to:
+  - `activeTab` - To modify the current YouTube page
+  - `scripting` - To inject the content scripts
+  - `storage` - To save your mode preferences
 
----
+## 🔄 Updates and Maintenance
 
-## 📜 Technical Details
+The extension is regularly updated to ensure compatibility with YouTube's interface changes. If you encounter any issues, please report them on GitHub.
 
-- **Manifest v3**: Uses the latest Chrome extension framework.
-- **Content Scripts**: Injected into YouTube pages to modify the UI.
-- **Session Storage**: Stores the selected mode for persistence.
-- **JavaScript Execution**: Dynamically applies changes without additional requests.
+## 🔮 Future Improvements
 
-### **Main Files**
-| File                  | Description |
-|----------------------|-------------|
-| `manifest.json`      | Defines extension settings. |
-| `background.js`      | Handles user interactions and script execution. |
-| `contentScript.js`   | Applies minimal video mode. |
-| `contentScriptLive.js` | Applies minimal live mode with chat. |
-| `popup.html`         | Creates the UI for the extension popup. |
-| `popup.js`          | Manages toggle actions and reload behavior. |
-
----
-
-## 🔧 Troubleshooting
-
-| Issue | Solution |
-|-------|----------|
-| Extension not loading | Make sure Developer Mode is enabled and you selected the correct folder. |
-| YouTube page not changing | Try refreshing the page after selecting a mode. |
-| Live chat not appearing | Ensure the stream has an active chat. |
-
----
-
-## 🏗️ Future Improvements
-
-- Add support for **keyboard shortcuts**.
-- Implement **dark mode** for the popup UI.
-
----
+- Add customizable layout options for Live mode
+- Include theater mode with adjustable player size
+- Create keyboard shortcuts for quick mode switching
+- Add dark/light theme options for the minimal interface
 
 ## 📝 License
 
-This project is open-source under the **MIT License**.
+This project is open-source under the MIT License.
 
-## 👥 Author
+## 👤 Author
 
-Developed by [Saymonn](https://github.com/saymonn37). Contributions and feedback are welcome! 🚀
+Developed by [Saymonn](https://github.com/saymonn37). Contributions and feedback are welcome!
