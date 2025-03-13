@@ -16,9 +16,13 @@
 ## 🖥️ Screenshot
 
 ![13-03-2025T18-05-13](https://github.com/user-attachments/assets/ebd87a28-2061-4b8f-a276-4cf431b48239)
+---
 ![13-03-2025T18-04-53](https://github.com/user-attachments/assets/a87f63a3-a7d8-4257-bf51-f9667353fbae)
+---
 ![13-03-2025T18-05-00](https://github.com/user-attachments/assets/c08108a9-1dab-4ecb-8d11-777139615abc)
+---
 ![13-03-2025T18-05-09](https://github.com/user-attachments/assets/5aa1795f-381e-4dc5-8684-b377902960c5)
+---
 ![13-03-2025T18-05-06](https://github.com/user-attachments/assets/e6f34a9c-9cea-414c-a732-411ad307a0f1)
 
 ## 🔧 Installation
