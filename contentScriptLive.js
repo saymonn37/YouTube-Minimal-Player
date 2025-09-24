@@ -47,7 +47,9 @@
 		existingPlayer.style.width = '100%'
 		existingPlayer.style.height = '100%'
 		existingPlayer.style.position = 'relative'
-		existingPlayer.style.display = 'block'
+		existingPlayer.style.display = 'flex'
+		existingPlayer.style.alignItems = 'center'
+		existingPlayer.style.justifyContent = 'center'
 
 		videoContainer.appendChild(existingPlayer)
 
@@ -105,17 +107,21 @@
 				width: 100% !important; 
 				height: 100% !important; 
 				position: relative !important; 
-				display: block !important;
+				display: flex !important;
+				align-items: center !important;
+				justify-content: center !important;
 				background: #000 !important;
 			}
-			video, .html5-main-video { 
+			video, .html5-main-video, .video-stream.html5-main-video { 
 				width: 100% !important; 
 				height: 100% !important; 
 				object-fit: contain !important; 
 				object-position: center center !important; 
 				background: #000 !important; 
 				display: block !important;
-				position: relative !important;
+				position: absolute !important;
+				top: 0 !important;
+				left: 0 !important;
 			}
 			.html5-video-container {
 				display: flex !important;
@@ -123,6 +129,7 @@
 				justify-content: center !important;
 				width: 100% !important;
 				height: 100% !important;
+				position: relative !important;
 			}
 			.ytp-chrome-bottom {
 				width: 100% !important;
@@ -138,14 +145,34 @@
 		`
 		document.head.appendChild(style)
 
-		// MutationObserver pilnujący playera
 		const observer = new MutationObserver(() => {
 			const container = document.querySelector('.html5-video-container')
 			if (container) {
 				container.style.display = 'flex'
 				container.style.alignItems = 'center'
 				container.style.justifyContent = 'center'
+				container.style.position = 'relative'
 			}
+			
+			const videoStream = document.querySelector('.video-stream.html5-main-video')
+			if (videoStream) {
+				videoStream.style.width = '100%'
+				videoStream.style.height = '100%'
+				videoStream.style.objectFit = 'contain'
+				videoStream.style.objectPosition = 'center center'
+				videoStream.style.display = 'block'
+				videoStream.style.position = 'absolute'
+				videoStream.style.top = '0'
+				videoStream.style.left = '0'
+			}
+			
+			const videoElement = document.querySelector('video')
+			if (videoElement) {
+				videoElement.style.position = 'absolute'
+				videoElement.style.top = '0'
+				videoElement.style.left = '0'
+			}
+			
 			const controls = document.querySelector('.ytp-chrome-bottom')
 			if (controls) {
 				controls.style.width = '100%'
