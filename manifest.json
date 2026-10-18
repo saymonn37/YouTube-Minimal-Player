@@ -3,7 +3,7 @@
 	"name": "YT Minimal Video&Live Player",
 	"version": "2.1",
 	"description": "Show only the video or live player on YouTube pages.",
-	"permissions": ["activeTab", "scripting", "storage"],
+	"permissions": ["activeTab", "scripting"],
 	"action": {
 		"default_popup": "popup.html",
 		"default_icon": {
@@ -11,9 +11,6 @@
 			"48": "icons/icon48.png",
 			"128": "icons/icon128.png"
 		}
-	},
-	"background": {
-		"service_worker": "background.js"
 	},
 	"content_scripts": [
 		{
