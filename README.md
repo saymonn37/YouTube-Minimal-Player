@@ -1,15 +1,15 @@
 # YouTube Minimal Player
 
-A Chrome extension that strips a YouTube page down to the player — with or without live chat.
+A Chrome extension that strips a YouTube page down to the player - with or without live chat.
 
 ![Screenshot](https://github.com/user-attachments/assets/ebd87a28-2061-4b8f-a276-4cf431b48239)
 
 ## Features
 
-- **Video mode** – only the player, filling the whole window.
-- **Live mode** – player (70%) next to live chat (30%), with chat banners and engagement prompts removed.
-- **Per tab** – the mode applies only to the current tab and resets when the tab is closed.
-- **No data collection** – no data leaves your browser.
+- **Video mode** - only the player, filling the whole window.
+- **Live mode** - player (70%) next to live chat (30%), with chat banners and engagement prompts removed.
+- **Per tab** - the mode applies only to the current tab and resets when the tab is closed.
+- **No data collection** - no data leaves your browser.
 
 ## Installation
 
@@ -37,7 +37,7 @@ A Chrome extension that strips a YouTube page down to the player — with or wit
 
 The popup saves the selected mode in the tab's `sessionStorage` and reloads the page. Content scripts then clear the page and keep only the player (plus the chat iframe in live mode).
 
-**Permissions:** `activeTab` and `scripting` – used only by the popup to read and set the mode in the current tab.
+**Permissions:** `activeTab` and `scripting` - used only by the popup to read and set the mode in the current tab.
 
 ## Contributing
 
