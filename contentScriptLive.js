@@ -47,9 +47,6 @@
 		existingPlayer.style.width = '100%'
 		existingPlayer.style.height = '100%'
 		existingPlayer.style.position = 'relative'
-		existingPlayer.style.display = 'flex'
-		existingPlayer.style.alignItems = 'center'
-		existingPlayer.style.justifyContent = 'center'
 
 		videoContainer.appendChild(existingPlayer)
 
@@ -94,7 +91,6 @@
 
 		const style = document.createElement('style')
 		style.textContent = `
-			* { box-sizing: border-box; }
 			html, body { 
 				margin: 0 !important; 
 				padding: 0 !important; 
@@ -107,9 +103,6 @@
 				width: 100% !important; 
 				height: 100% !important; 
 				position: relative !important; 
-				display: flex !important;
-				align-items: center !important;
-				justify-content: center !important;
 				background: #000 !important;
 			}
 			video, .html5-main-video, .video-stream.html5-main-video { 
@@ -130,11 +123,6 @@
 				width: 100% !important;
 				height: 100% !important;
 				position: relative !important;
-			}
-			.ytp-chrome-bottom {
-				width: 100% !important;
-				left: 0 !important;
-				right: 0 !important;
 			}
 			.ytp-chrome-top,
 			.ytp-gradient-top,
@@ -172,15 +160,12 @@
 				videoElement.style.top = '0'
 				videoElement.style.left = '0'
 			}
-			
-			const controls = document.querySelector('.ytp-chrome-bottom')
-			if (controls) {
-				controls.style.width = '100%'
-				controls.style.left = '0'
-				controls.style.right = '0'
-			}
 		})
 		observer.observe(document.body, { childList: true, subtree: true })
+
+		// Player liczy szerokość paska kontrolek z rozmiaru okna - przelicz po przeniesieniu
+		window.dispatchEvent(new Event('resize'))
+		setTimeout(() => window.dispatchEvent(new Event('resize')), 1000)
 	}
 
 	function removeChatElements(iframe) {
