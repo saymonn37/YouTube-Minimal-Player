@@ -9,7 +9,7 @@ A Chrome extension that strips a YouTube page down to the player — with or wit
 - **Video mode** – only the player, filling the whole window.
 - **Live mode** – player (70%) next to live chat (30%), with chat banners and engagement prompts removed.
 - **Per tab** – the mode applies only to the current tab and resets when the tab is closed.
-- **No data collection** – nothing is stored or sent anywhere.
+- **No data collection** – no data leaves your browser.
 
 ## Installation
 
